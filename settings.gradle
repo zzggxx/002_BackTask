@@ -1,1 +1,1 @@
-include ':IntentService'
+include ':IntentService', ':Loader'
