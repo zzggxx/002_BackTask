@@ -11,6 +11,15 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+/**
+ * 看到这代码是不是觉得特别简洁，让 MainActivity 中继承了 AlbumCollection 中的 AlbumCallback 接口，接着 onCreate()
+ * 中实例化了 AlbumCollection，然后让 AlbumCollection 开始加载数据。
+ * <p>
+ * 等数据加载完成后，便将包含数据的 Cursor 回调在 onAlbumLoad() 方法中，我们便可以进行 UI 的更新。
+ * <p>
+ * 可以看到采用 Loader 机制，可以让我们的 Activity 或 Fragment 中的代码变得相当的简洁、清晰，而且代码耦合程度也相当低。
+ */
+
 public class MainActivity extends AppCompatActivity implements AlbumCollection.AlbumCallbacks {
 
     private AlbumCollection mCollection;

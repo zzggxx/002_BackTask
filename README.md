@@ -17,4 +17,4 @@
 
 ## 二.使用 Loader
 
-自3.0之后推荐的一个及其方便的方法主要用于系统的内容ContentProvider.[使用方法跳转]()
+自3.0之后推荐的一个及其方便的方法主要用于系统的内容ContentProvider.[使用方法跳转](https://github.com/zzggxx/BackTasks/blob/master/README_Loader.md)

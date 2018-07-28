@@ -7,8 +7,8 @@ import android.provider.MediaStore;
 import android.support.v4.content.CursorLoader;
 
 /**
- * @author Haoz
- * @date 2017/11/22.
+ * 加载器是我们加载数据的工具，通过将对应的 URI 以及其他的查询条件传递给加载器，便可让加载器在后台高效地加载数据，
+ * 等数据加载完成了便会返回一个 Cursor.
  */
 
 public class AlbumLoader extends CursorLoader {

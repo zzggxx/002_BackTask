@@ -10,8 +10,10 @@ import android.support.v4.content.Loader;
 import java.lang.ref.WeakReference;
 
 /**
- * @author Haoz
- * @date 2017/11/26.
+ * 为了降低代码的耦合度，继承 LoaderManager.Loadercallbacks 实现 AlbumLoader 的管理类，将 Loader 的各种状态进行管理。
+ * <p>
+ * 通过外部传入 Context，采用弱引用的方式防止内存泄露，获取 LoaderManager，并在 AlbumCollection 内部定义了相应的接口，将加载完成后返回的 Cursor 回调出去，让外部的 Activity 或 Fragment 进行相应的处理。
+ * <p>
  */
 
 public class AlbumCollection implements LoaderManager.LoaderCallbacks<Cursor> {
@@ -42,6 +44,7 @@ public class AlbumCollection implements LoaderManager.LoaderCallbacks<Cursor> {
 
     /**
      * 加载完毕数据,此时需要清除数据等操作.
+     *
      * @param loader
      * @param data
      */
@@ -57,6 +60,7 @@ public class AlbumCollection implements LoaderManager.LoaderCallbacks<Cursor> {
 
     /**
      * 若是更新的筛选条件的话,使用此方法重新加载Loader.
+     *
      * @param loader
      */
     @Override

@@ -10,10 +10,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-/**
- * @author Haoz
- * @date 2017/11/26.
- */
 
 public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHolder> {
 
