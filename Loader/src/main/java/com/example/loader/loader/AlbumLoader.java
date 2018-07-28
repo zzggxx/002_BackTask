@@ -1,4 +1,4 @@
-package com.example.loader;
+package com.example.loader.loader;
 
 import android.content.Context;
 import android.database.Cursor;

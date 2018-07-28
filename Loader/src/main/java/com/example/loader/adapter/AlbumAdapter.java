@@ -1,4 +1,4 @@
-package com.example.loader;
+package com.example.loader.adapter;
 
 import android.database.Cursor;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.loader.R;
 
 
 public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHolder> {

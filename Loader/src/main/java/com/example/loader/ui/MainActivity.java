@@ -1,4 +1,4 @@
-package com.example.loader;
+package com.example.loader.ui;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -10,6 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.example.loader.R;
+import com.example.loader.adapter.AlbumAdapter;
+import com.example.loader.callback.AlbumCollection;
 
 /**
  * 看到这代码是不是觉得特别简洁，让 MainActivity 中继承了 AlbumCollection 中的 AlbumCallback 接口，接着 onCreate()
