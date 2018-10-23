@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Toast.makeText(MainActivity.this, intent.getStringExtra("status") + ++i, Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,
+                    intent.getStringExtra("status") + ++i, Toast.LENGTH_SHORT).show();
         }
     };
     private LocalBroadcastManager mLocalBroadcastManager;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent backgroundTask = new Intent(MainActivity.this, MyBackgroundTaskIntentService.class);
+//                开启service,启动处理任务的onHandleIntent方法.
                 startService(backgroundTask);
 
             }

@@ -30,7 +30,8 @@ public class MyBackgroundTaskIntentService extends IntentService {
         Log.i(TAG, "onCreate: " + "backthread Create");
     }
 
-    //    处理后台任务,子线程中
+    //    处理后台任务,子线程中.自动开启一个新线程,若是线程中的任务处理完毕就将service销毁了,但是若任务没有处理
+    //    完毕又进行了startService(),那么将会将那个任务放在已经开启的线程中处理,有队列的排序.
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
 
