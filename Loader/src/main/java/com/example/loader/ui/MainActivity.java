@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements AlbumCollection.A
         }
     }
 
+    /*-------------------数据回调---------------------------*/
     @Override
     public void onAlbumLoad(Cursor cursor) {
         mRvAlbum = (RecyclerView) findViewById(R.id.main_rv_album);
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements AlbumCollection.A
     public void onAlbumReset() {
 
     }
+    /*----------------------------------------------------*/
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

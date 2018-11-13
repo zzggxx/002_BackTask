@@ -52,7 +52,7 @@ public class AlbumLoader extends CursorLoader {
     private static final String BUCKET_ORDER_BY = "datetaken DESC";
 
     private AlbumLoader(Context context, String selection, String[] selectionArgs) {
-        super(context, QUERY_URI, PROJECTION, SELECTION, SELECTION_ARGS, BUCKET_ORDER_BY);
+        super(context, QUERY_URI, PROJECTION, selection, selectionArgs, BUCKET_ORDER_BY);
     }
 
     public static CursorLoader newInstance(Context context) {
